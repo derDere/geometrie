@@ -1,2 +1,2 @@
-# geometrie
-c++ geometrie structures ant utilities
+# Geometrie++
+c++ geometrie structures and utilities
