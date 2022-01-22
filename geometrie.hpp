@@ -14,8 +14,10 @@ namespace geometrie {
   class cSize : cVector2D;
   class cPoint : cVector2D;
   class cRect : cPrintable;
-  class cLine : cPrintable;
   class cCircle : cPrintable;
+  class cLine : cPrintable;
+  class cRay : cLine;
+  class cLineSegment : cLine;
 
   cVector2D operator +(cVector2D, cVector2D);
   cVector2D operator +(cVector2D, float);
@@ -110,6 +112,8 @@ namespace geometrie {
       void ApproachDegrees(float, float);
       void ApproachDegrees(float, int);
 
+      virtual string ToString();
+
       cAngle();
       cAngle(float);
       cAngle(int);
@@ -132,6 +136,8 @@ namespace geometrie {
       float GetY();
       void SetY(float);
       void SetY(int);
+
+      virtual string ToString();
   }
 
   class cSize() {
@@ -143,6 +149,8 @@ namespace geometrie {
       float GetHeight();
       void SetHeight(float);
       void SetHeight(int);
+
+      virtual string ToString();
   }
 
   class cRect() {
@@ -173,6 +181,8 @@ namespace geometrie {
       cRect(int, int, int, int);
 
       ~cRect();
+
+      virtual string ToString();
   }
 
 }
